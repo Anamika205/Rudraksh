@@ -39,7 +39,7 @@ export default function CategoryPage() {
             <div className="hidden md:block text-sm text-gray-600">Home &nbsp;/&nbsp; All Category</div>
           </div>
 
-          <div className="w-full md:w-1/3">
+          <div className="w-full">
             <div className="flex items-center bg-white rounded-lg border border-gray-200 overflow-hidden">
               <input
                 type="text"

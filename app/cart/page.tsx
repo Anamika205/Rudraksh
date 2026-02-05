@@ -4,25 +4,38 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
+interface CartItem {
+  id: number;
+  name: string;
+  price: number;
+  quantity: number;
+  image: string;
+}
+
+interface Coupon {
+  code: string;
+  discount: number;
+}
+
 export default function CartPage() {
-  const [cartItems, setCartItems] = useState([
+  const [cartItems, setCartItems] = useState<CartItem[]>([
     { id: 1, name: "2 Mukhi Bracelet - Almonds Warmth & Natural Shaveme", price: 1500, quantity: 1, image: "/categories/rudra.jpg" },
     { id: 2, name: "2 Mukhi Bracelet - Almonds Warmth & Natural Shaveme", price: 1500, quantity: 1, image: "/categories/rudra.jpg" },
     { id: 3, name: "2 Mukhi Bracelet - Almonds Warmth & Natural Shaveme", price: 1500, quantity: 1, image: "/categories/rudra.jpg" },
   ]);
 
   const [couponCode, setCouponCode] = useState("");
-  const [appliedCoupon, setAppliedCoupon] = useState(null);
+  const [appliedCoupon, setAppliedCoupon] = useState<Coupon | null>(null);
   const [showCouponInput, setShowCouponInput] = useState(false);
 
-  const updateQuantity = (id, quantity) => {
+  const updateQuantity = (id: number, quantity: number) => {
     if (quantity < 1) return;
     setCartItems(cartItems.map(item => 
       item.id === id ? { ...item, quantity } : item
     ));
   };
 
-  const removeItem = (id) => {
+  const removeItem = (id: number) => {
     setCartItems(cartItems.filter(item => item.id !== id));
   };
 
@@ -104,20 +117,22 @@ export default function CartPage() {
                           onClick={() => removeItem(item.id)}
                           className="text-gray-400 hover:text-red-500 text-lg"
                         >
-                          🗑️
+                          🗑
                         </button>
 
-                        <div className="flex items-center border border-black-100 rounded">
+                        <div className="flex items-center border border-gray-200 rounded overflow-hidden">
                           <button
                             onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                            className="px-2 py-1 hover:bg-gray-10"
+                            className="px-3 py-1 text-gray-800 hover:bg-gray-100 transition font-semibold"
+                            aria-label="Decrease quantity"
                           >
                             −
                           </button>
-                          <span className="px-3 py-1 text-sm">{item.quantity}</span>
+                          <span className="px-4 py-1 text-sm font-medium text-gray-900">{item.quantity}</span>
                           <button
                             onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                            className="px-2 py-1 hover:bg-black-100"
+                            className="px-3 py-1 text-gray-800 hover:bg-gray-100 transition font-semibold"
+                            aria-label="Increase quantity"
                           >
                             +
                           </button>
@@ -168,9 +183,11 @@ export default function CartPage() {
               </div>
 
               {/* Checkout Button */}
-              <button className="w-full bg-amber-700 text-white py-3 rounded-lg font-bold mb-4 hover:bg-amber-800">
-                CHECKOUT
-              </button>
+              <Link href="/checkout">
+                <button className="w-full bg-amber-700 text-white py-3 rounded-lg font-bold mb-4 hover:bg-amber-800 transition">
+                  CHECKOUT
+                </button>
+              </Link>
 
               {/* Coupon Section */}
               <div className="bg-amber-50 rounded-lg p-4">
