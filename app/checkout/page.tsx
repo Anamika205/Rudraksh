@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -16,6 +17,7 @@ interface Address {
 }
 
 export default function CheckoutPage() {
+  const router = useRouter();
   const [addresses, setAddresses] = useState<Address[]>([
     {
       id: 1,
@@ -359,7 +361,25 @@ export default function CheckoutPage() {
               </div>
 
               {/* Continue Button */}
-              <button className="w-full bg-amber-700 text-white py-3 rounded-lg font-bold hover:bg-amber-800 transition">
+              <button 
+                onClick={() => {
+                  const selectedAddress = addresses.find(addr => addr.id === selectedAddressId);
+                  if (selectedAddress) {
+                    localStorage.setItem('selectedAddress', JSON.stringify({
+                      fullName: selectedAddress.type,
+                      addressLine1: selectedAddress.street,
+                      city: selectedAddress.city,
+                      state: selectedAddress.state,
+                      pincode: selectedAddress.pincode,
+                      phone: selectedAddress.phone
+                    }));
+                    router.push('/payment');
+                  } else {
+                    alert('Please select an address');
+                  }
+                }}
+                className="w-full bg-amber-700 text-white py-3 rounded-lg font-bold hover:bg-amber-800 transition"
+              >
                 CONTINUE
               </button>
 

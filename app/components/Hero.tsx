@@ -1,8 +1,7 @@
 import Image from "next/image";
 
-import Footer from "./Footer";
 
-export default function Hero() {
+export default function  Hero() {
   return (
     <section className="bg-[#FFF2DF]">
       <div className="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-2 gap-10">

@@ -36,6 +36,7 @@ export default function Navbar() {
           <span className="cursor-pointer text-xl hover:opacity-70">❤️</span>
           <Link href="/cart" className="cursor-pointer text-xl hover:opacity-70">🛒</Link>
           <Link href="/login" className="cursor-pointer text-xl hover:opacity-70">👤</Link>
+          {/* <Link href="/signup" className="cursor-pointer text-xl hover:opacity-70 text-amber-800 font-size-xs">Register</Link> */}
         </div>
       </div>
     </header>

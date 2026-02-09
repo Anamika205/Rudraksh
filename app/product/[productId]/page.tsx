@@ -96,8 +96,8 @@ export default function ProductDetailPage() {
 
             {/* Quantity & Add to Cart */}
             <div className="flex gap-4 mb-8">
-              <div className="flex items-center border border-gray-300 rounded-lg">
-                <button onClick={() => setQuantity(Math.max(1, quantity - 1))} className="px-4 py-2 hover:bg-gray-100">-</button>
+              <div className="flex items-center border border-gray-300 rounded-lg  text-gray-700">
+                <button onClick={() => setQuantity(Math.max(1, quantity - 1))} className="px-4 py-2  hover:bg-gray-100">-</button>
                 <span className="px-4">{quantity}</span>
                 <button onClick={() => setQuantity(quantity + 1)} className="px-4 py-2 hover:bg-gray-100">+</button>
               </div>
