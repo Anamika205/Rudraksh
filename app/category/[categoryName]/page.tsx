@@ -38,6 +38,7 @@ export default function CategoryProductPage() {
   const [search, setSearch] = useState("");
 
   return (
+    
     <div className="bg-[#fff2df] min-h-screen">
         <Navbar/>
       {/* Top bar */}

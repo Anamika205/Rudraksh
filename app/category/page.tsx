@@ -28,8 +28,9 @@ export default function CategoryPage() {
 
   return (
     <div className="bg-[#fff2df] min-h-screen">
+      <Navbar/>
       <div className="max-w-7xl mx-auto p-6 space-y-6">
-<Navbar/>
+
         {/* Top bar: showing + search */}
         <div className="flex items-center justify-between gap-4">
           <div className="flex items-center gap-4 w-full md:w-2/3">
