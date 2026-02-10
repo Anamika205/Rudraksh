@@ -35,8 +35,9 @@ export default function Navbar() {
         <div className="flex gap-5 items-center">
           <Link href="/wishlist" className="cursor-pointer text-xl hover:opacity-70">❤️</Link>
           <Link href="/cart" className="cursor-pointer text-xl hover:opacity-70">🛒</Link>
-          <Link href="/login" className="cursor-pointer text-xl hover:opacity-70">👤</Link>
-         <Link href="/signup" className="cursor-pointer text-xl hover:opacity-70 text-amber-800 ">Register</Link>
+          <Link href="/profile" className="cursor-pointer text-xl hover:opacity-70">👤</Link>
+          {/* <Link href="/signup" className="cursor-pointer text-sm font-medium text-amber-800 hover:text-amber-900">Register</Link> */}
+          <Link href="/login" className="cursor-pointer text-sm font-medium text-amber-800 hover:text-amber-900">Login</Link>
         </div>
       </div>
     </header>
