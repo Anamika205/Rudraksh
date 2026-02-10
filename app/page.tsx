@@ -7,7 +7,9 @@ import Image from "next/image";
 import Link from "next/link";
 import Footer from "./components/Footer";
 
+
 export default function Home() {
+  
   return (
     <>
       <Navbar/>
@@ -30,7 +32,7 @@ export default function Home() {
                   <h3 className="font-semibold text-gray-900 mb-2">Premium Rudraksha</h3>
                   <p className="text-sm text-gray-600 mb-4">Authentic and blessed for spiritual growth.</p>
                   <div className="flex items-center justify-between">
-                    <span className="text-lg font-bold text-amber-700">$49.99</span>
+                    <span className="text-lg font-bold text-amber-700">₹ 49.99</span>
                     <button className="bg-amber-600 text-white px-4 py-2 rounded text-sm hover:bg-amber-700">
                       Add to Cart
                     </button>

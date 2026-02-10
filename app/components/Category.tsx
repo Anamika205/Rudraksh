@@ -14,11 +14,11 @@ export default function CategorySection() {
 
         <div className="flex items-end justify-between mb-8 font-black ">
           <div>
-            <h2 className="text-xl font-semibold text-amber-800">Shop by</h2>
-            <h3 className="text-2xl font-bold text-amber-800">Category</h3>
-            <p className="text-x-l text-gray-600">
+            <h3 className="text-2xl font-semibold text-amber-800">Shop by Category</h3>
+            {/* <h3 className="text-2xl font-bold text-amber-800"></h3> */}
+            {/* <p className="text-x-l text-gray-600">
               hand-selected for spiritual seekers
-            </p>
+            </p> */}
           </div>
 
           <Link href="/category" className="text-sm underline cursor-pointer hover:text-amber-800">

@@ -33,10 +33,10 @@ export default function Navbar() {
 
         {/* Icons */}
         <div className="flex gap-5 items-center">
-          <span className="cursor-pointer text-xl hover:opacity-70">❤️</span>
+          <Link href="/wishlist" className="cursor-pointer text-xl hover:opacity-70">❤️</Link>
           <Link href="/cart" className="cursor-pointer text-xl hover:opacity-70">🛒</Link>
           <Link href="/login" className="cursor-pointer text-xl hover:opacity-70">👤</Link>
-          {/* <Link href="/signup" className="cursor-pointer text-xl hover:opacity-70 text-amber-800 font-size-xs">Register</Link> */}
+         <Link href="/signup" className="cursor-pointer text-xl hover:opacity-70 text-amber-800 ">Register</Link>
         </div>
       </div>
     </header>

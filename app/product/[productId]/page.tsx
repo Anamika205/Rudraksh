@@ -110,7 +110,8 @@ export default function ProductDetailPage() {
 
             {/* Share buttons */}
             <div className="flex gap-4 pt-4 border-t border-gray-200">
-              <button className="flex items-center gap-2 text-gray-700 hover:text-amber-700">❤️ Wishlist</button>
+              <Link href="/wishlist" className="text-gray-700 hover:text-amber-700">❤️ Wishlist</Link>
+              {/* <button className="flex items-center gap-2 text-gray-700 hover:text-amber-700">❤️ Wishlist</button> */}
               <button className="flex items-center gap-2 text-gray-700 hover:text-amber-700">📤 Share</button>
             </div>
           </div>

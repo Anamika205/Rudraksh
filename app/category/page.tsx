@@ -66,7 +66,7 @@ export default function CategoryPage() {
           </div>
 
           <div className="w-48 h-48 relative hidden sm:block">
-            <Image src="/categories/banner-model.jpg" alt="model" fill className="object-contain" />
+            <Image src="/categories/rudra.jpg" alt="model" fill className="object-contain" />
           </div>
         </div>
 

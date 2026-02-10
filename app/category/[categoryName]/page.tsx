@@ -68,9 +68,12 @@ export default function CategoryProductPage() {
               placeholder="Find something"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none"
+              className="w-full border border-gray-300 rounded-lg px-4 py-2 text-gray-700 focus:outline-none"
             />
           </div>
+          <button className="px-4 py-2 bg-amber-600 text-white rounded-lg">
+            Search
+          </button>
         </div>
 
         {/* Flex layout: sidebar + main */}
